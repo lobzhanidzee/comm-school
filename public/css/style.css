@@ -1,10 +1,64 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+/* Navigation */
+header {
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+nav ul li {
+  font-size: 25px;
+  list-style: none;
+}
 
-/* Order styles */
+/* Home Page */
+section {
+  display: flex;
+  justify-content: space-evenly;
+}
+.pizza {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #b1b1b1;
+  border-radius: 10px;
+  background-color: #ffdeb1;
+}
+
+/* Contacts Page */
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+}
+
+/* Order Page */
 table:first-child td {
   text-align: right;
+}
+
+/* Other */
+h1 {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: orangered;
+}
+
+main {
+  margin-bottom: 50px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  padding: 10px;
 }
