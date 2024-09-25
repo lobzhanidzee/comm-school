@@ -41,6 +41,10 @@ section {
 table:first-child td {
   text-align: right;
 }
+form table:first-child input {
+  height: 30px;
+  border-radius: 5px;
+}
 
 /* Other */
 h1 {
@@ -50,15 +54,12 @@ a {
   text-decoration: none;
   color: orangered;
 }
-
 main {
   margin-bottom: 50px;
 }
-
 textarea {
   resize: none;
 }
-
 button {
   padding: 10px;
 }
