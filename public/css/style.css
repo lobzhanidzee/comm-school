@@ -37,10 +37,12 @@ textarea {
 }
 form input[type="text"],
 form input[type="email"],
-form input[type="number"] {
+form input[type="number"],
+select {
   height: 35px;
   padding: 5px;
   border-radius: 5px;
+  border: 1px solid #b1b1b1;
 }
 
 /* Navigation */
