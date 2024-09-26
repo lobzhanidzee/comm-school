@@ -1,7 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Other */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+a {
+  text-decoration: none;
+  color: orangered;
+}
+main {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 70px 20px;
+}
+button {
+  background-color: orangered;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 100%;
+}
+textarea {
+  resize: none;
+  height: 100px;
+  border-radius: 5px;
+  border: 2px solid #767676;
+  padding: 5px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  height: 35px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 /* Navigation */
 header {
   display: flex;
   align-items: center;
+  gap: 60px;
+  padding: 0 60px;
 }
 nav ul {
   display: flex;
@@ -17,13 +64,16 @@ nav ul li {
 section {
   display: flex;
   justify-content: space-evenly;
+  text-align: left;
+  gap: 30px;
 }
 .pizza {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 300px;
+  width: 350px;
   padding: 20px;
+  gap: 15px;
   border: 1px solid #b1b1b1;
   border-radius: 10px;
   background-color: #ffdeb1;
@@ -38,28 +88,23 @@ section {
 }
 
 /* Order Page */
+table td {
+  padding: 5px;
+}
 table:first-child td {
   text-align: right;
 }
-form table:first-child input {
-  height: 30px;
-  border-radius: 5px;
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 30px;
 }
-
-/* Other */
-h1 {
+form p {
   text-align: center;
 }
-a {
-  text-decoration: none;
-  color: orangered;
-}
-main {
-  margin-bottom: 50px;
-}
-textarea {
-  resize: none;
-}
-button {
-  padding: 10px;
+
+/* footer */
+footer {
+  padding: 10px 30px;
 }
