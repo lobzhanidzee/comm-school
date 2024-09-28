@@ -57,9 +57,9 @@ nav ul {
   justify-content: space-evenly;
   gap: 50px;
 }
-nav ul li {
+nav ul {
   font-size: 25px;
-  list-style: none;
+  list-style-type: none;
 }
 
 /* Home Page */
