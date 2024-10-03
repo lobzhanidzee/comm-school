@@ -42,6 +42,7 @@ header .middle {
 header .middle .left {
   display: flex;
   align-items: center;
+  width: 65%;
 }
 
 header .middle .left h1 a {
@@ -58,8 +59,12 @@ header .middle .left .location {
   gap: 9px;
   margin: 0px 29px 0px 29px;
 }
+header .middle .left .searchBox {
+  width: 60%;
+}
 header .middle .left .searchBox form {
   display: flex;
+  width: 100%;
 }
 header .middle .left .searchBox form input,
 header .middle .left .searchBox form button {
@@ -69,10 +74,10 @@ header .middle .left .searchBox form button {
   background-color: #ffffff;
 }
 header .middle .left .searchBox form input {
-  width: 600px;
   border-right: none;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  width: 100%;
 }
 header .middle .left .searchBox form input:focus {
   outline: none;
@@ -97,30 +102,254 @@ header .middle .right .right__box:nth-child(1),
 header .middle .right .right__box:nth-child(3),
 header .middle .right .right__box:nth-child(4) {
   border-right: 1px solid #ececec;
-  padding-right: 10px;
+  padding-right: 16px;
 }
 
 header .middle .right .right__box .right__box--circle {
+  display: flex;
+  align-items: center;
   padding: 10px;
   border: 1px solid #ececec;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
 }
 header .middle .right .right__box .right__box--circle img {
   width: 20px;
   height: 18px;
 }
+/* Header Bottom */
+header .bottom {
+  border-top: 1px solid #ececec;
+}
+header .bottom .center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-main .slider-section {
-  width: 100%;
-  height: 500px;
-  background-image: url("../images/slidet-bg.png");
-  background-repeat: no-repeat;
+  width: 80%;
+  height: 85px;
+  margin: auto;
 }
 
+header .bottom .center .bottom__left {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  gap: 3%;
+}
+header .bottom .center .bottom__left .bottom__left--box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .bottom .center .bottom__left .bottom__left--box span {
+  font-size: 14px;
+}
+header .bottom .center .bottom__left .bottom__left--box:nth-child(1) {
+  display: flex;
+  gap: 10px;
+  width: 15%;
+  padding: 6px 0px 10px 0px;
+  border-right: 1px solid #ececec;
+}
+
+header .bottom .center .bottom__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+header .bottom .center .bottom__right a {
+  color: #222222;
+  font-size: 27px;
+}
+header .bottom .center .bottom__right button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 176px;
+  height: 46px;
+  background-color: #0baf9a;
+  color: #ffffff;
+  border: 1px solid #0baf9a;
+  border-radius: 4px;
+}
+
+/* Main Section */
+main .slider-section {
+  width: 100%;
+  height: 612px;
+  background-image: url("../images/slidet-bg.png");
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .slider-section .center {
+  display: flex;
+  gap: 20px;
+  height: 85%;
+}
+main .slider-section .center .slider-box__first {
+  background-image: url("../images/slider1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 788px;
+  height: 100%;
+}
+
+main .slider-section .center .slider-box__second {
+  background-image: url("../images/slider2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 382px;
+  height: 100%;
+}
+main .slider-section .center .slider-box__third {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 382px;
+  height: 100%;
+}
+main .slider-section .center .slider-box__third .slider-box__third--1 {
+  background-image: url("../images/slider3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+main .slider-section .center .slider-box__third .slider-box__third--2 {
+  background-image: url("../images/slider4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+
+/* Product Slider Section */
+main .product-slider .center {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 70px;
+}
+main .product-slider .center .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+main .product-slider .center .top .product-btns {
+  display: flex;
+  gap: 15px;
+}
+main .product-slider .center .top .product-btns button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+}
+main .product-slider .center .top button:nth-child(2) {
+  transform: rotate(180deg);
+}
+main .product-slider .center .bottom {
+  display: flex;
+  gap: 30px;
+}
+main .product-slider .center .bottom .bottom-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .product-slider .center .bottom .bottom-box > div {
+  width: 163px;
+  height: 97px;
+  background-color: #fff9d8;
+  border-radius: 50%;
+  position: relative;
+}
+main .product-slider .center .bottom .bottom-box > div > img {
+  position: absolute;
+  left: 15%;
+  top: 10%;
+}
+
+/* Footer */
+
+footer {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  color: #333;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer-top .center {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top__box {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-top__box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-top__box p,
+.footer-top__box ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-top__box ul li {
+  margin-bottom: 5px;
+}
+
+.footer-top__box ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-top__box ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-top__box img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.footer-top__box:nth-child(3) img {
+  width: 20px;
+}
+.social-icons a {
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #777;
+}
 .center {
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
