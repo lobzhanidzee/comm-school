@@ -180,13 +180,13 @@ main .slider-section {
   width: 100%;
   height: 612px;
   background-image: url("../images/slidet-bg.png");
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 main .slider-section .center {
   display: flex;
+  justify-content: center;
   gap: 20px;
   height: 85%;
 }
@@ -257,6 +257,7 @@ main .product-slider .center .top button:nth-child(2) {
 main .product-slider .center .bottom {
   display: flex;
   gap: 30px;
+  justify-content: center;
 }
 main .product-slider .center .bottom .bottom-box {
   display: flex;
