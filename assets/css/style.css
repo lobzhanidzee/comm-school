@@ -58,7 +58,7 @@ section {
   animation-duration: 7s;
   animation-iteration-count: infinite;
 }
-.cloud.small-cloud:nth-child(3) {
+.cloud.small-cloud:nth-child(5) {
   animation-direction: reverse;
   animation-duration: 5s;
   animation-delay: 2s;
