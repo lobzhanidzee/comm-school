@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/web-favicon.png">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Shop.co</title>
   </head>
   <body>
     <header>
-      <div class="page-size-center">
-        <div class="header-top">
+      <div class="header-top">
+        <div class="page-size-center">
           <p>
             Sign up and get 20% off to your first order.
             <a href="#">Sign Up Now</a>
@@ -18,37 +19,45 @@
             ><img src="./assets/images/icons/x-icon.svg" alt="close"
           /></a>
         </div>
+        </div>
         <nav>
-          <a href="./">SHOP.CO</a>
-          <ul>
-            <li>
-              Shop
-              <img
-                src="./assets/images/icons/arrowdown-icon.svg"
-                alt="arrow-down-icon"
-              />
+          <div class="page-size-center">
+            <a href="./">SHOP.CO</a>
+            <ul>
+              <li>
+                <a href="#">
+                  Shop
+                  <img
+                    src="./assets/images/icons/arrowdown-icon.svg"
+                    alt="arrow-down-icon"
+                  />
+                </a>
+              </li>
+              <li><a href="#">
+                On Sale
+              </a>
             </li>
-            <li>On Sale</li>
-            <li>New Arrivals</li>
-            <li>Brands</li>
-          </ul>
-          <form action="./">
-            <label for="search-bar"></label>
-            <button>
-              <img
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Brands</a></li>
+            </ul>
+            <form action="./">
+              <button>
+                <img
                 src="./assets/images/icons/search-icon.svg"
                 alt="search-icon"
-              />
-            </button>
-            <input type="text" name="search-bar" />
-          </form>
-          <div class="header-cart-profile">
-            <a href="#">
-              <img src="./assets/images/icons/cart-icon.svg" alt="cart" />
-            </a>
-            <a href="#">
-              <img src="./assets/images/icons/profile-icon.svg" alt="profile" />
-            </a>
+                />
+              </button>
+              <input type="text" name="search-bar" placeholder="Search for products..."/>
+              <label for="search-bar"></label>
+            </form>
+            <div class="header-cart-profile">
+              <a href="#">
+                <img src="./assets/images/icons/cart-icon.svg" alt="cart" />
+              </a>
+              <a href="#">
+                <img src="./assets/images/icons/profile-icon.svg" alt="profile" />
+              </a>
+            </div>
           </div>
         </nav>
       </div>
@@ -56,9 +65,11 @@
 
     <main>
       <section class="welcome-section">
+        <img src="./assets/images/star.png" alt="star">
+        <img src="./assets/images/star.png" alt="star">
         <div class="page-size-center">
           <div class="welcome-section--text">
-            <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+            <h1><span>FIND CLOTHES</span> <span>THAT MATCHES</span> <span>YOUR STYLE</span></h1>
             <p>
               Browse through our diverse range of meticulously crafted garments,
               designed to bring out your individuality and cater to your sense
@@ -83,11 +94,13 @@
         </div>
       </section>
       <section class="brands">
-        <img src="./assets/images/versace-logo.png" alt="versace-logo" />
-        <img src="./assets/images/zara-logo.png" alt="zara-logo" />
-        <img src="./assets/images/gucci-logo.png" alt="gucci-logo" />
-        <img src="./assets/images/prada-logo.png" alt="prada-logo" />
-        <img src="./assets/images/calvin-klein-logo.png" alt="calvin-logo" />
+        <div class="page-size-center">
+          <img src="./assets/images/versace-logo.png" alt="versace-logo" />
+          <img src="./assets/images/zara-logo.png" alt="zara-logo" />
+          <img src="./assets/images/gucci-logo.png" alt="gucci-logo" />
+          <img src="./assets/images/prada-logo.png" alt="prada-logo" />
+          <img src="./assets/images/calvin-klein-logo.png" alt="calvin-logo" />
+        </div>
       </section>
       <section class="item-shop">
         <div class="page-size-center">
@@ -96,74 +109,88 @@
             <div class="item-shop__container--card">
               <img src="./assets/images/shop-item-1.png" alt="shop-item" />
               <h3>T-shirt With Tape Details</h3>
-              <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-2-icon.svg"
-                alt="star"
-              /><span>4.5/5</span>
+              <div class="shop-card-reviews">
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-2-icon.svg"
+                  alt="star"
+                /><span>4.5/5</span>
+              </div>
               <p>$120</p>
             </div>
             <div class="item-shop__container--card">
               <img src="./assets/images/shop-item-2.png" alt="shop-item" />
-              <h3>T-shirt With Tape Details</h3>
-              <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-2-icon.svg"
-                alt="star"
-              /><span>4.5/5</span>
-              <p>$120</p>
+              <h3>Skinny Fit Jeans</h3>
+              <div class="shop-card-reviews">
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-2-icon.svg"
+                  alt="star"
+                /><span>3.5/5</span>
+              </div>
+              <div class="sale-price">
+                <p>$120</p>
+                <span>$260</span>
+                <div>-20%</div>
+              </div>
             </div>
             <div class="item-shop__container--card">
               <img src="./assets/images/shop-item-3.png" alt="shop-item" />
-              <h3>T-shirt With Tape Details</h3>
-              <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-2-icon.svg"
-                alt="star"
-              /><span>4.5/5</span>
+              <h3>Checkered Shirt</h3>
+              <div class="shop-card-reviews">
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-2-icon.svg"
+                  alt="star"
+                /><span>4.5/5</span>
+              </div>
+
               <p>$120</p>
             </div>
             <div class="item-shop__container--card">
               <img src="./assets/images/shop-item-4.png" alt="shop-item" />
-              <h3>T-shirt With Tape Details</h3>
-              <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-2-icon.svg"
-                alt="star"
-              /><span>4.5/5</span>
-              <p>$120</p>
+              <h3>Sleeve Striped T-shirt</h3>
+              <div class="shop-card-reviews">
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-2-icon.svg"
+                  alt="star"
+                /><span>4.5/5</span>
+              </div>
+              <div class="sale-price">
+                <p>$130</p>
+                <span>$160</span>
+                <div>-30%</div>
+              </div>
             </div>
           </div>
           <button>View All</button>
@@ -175,75 +202,75 @@
           <div class="item-shop__container">
             <div class="item-shop__container--card">
               <img src="./assets/images/shop-item-5.png" alt="shop-item" />
-              <h3>T-shirt With Tape Details</h3>
-              <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-2-icon.svg"
-                alt="star"
-              /><span>4.5/5</span>
-              <p>$120</p>
+              <h3>Vertical Striped Shirt</h3>
+              <div class="shop-card-reviews">
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><span>5.0/5</span>
+              </div>
+              <div class="sale-price">
+                <p>$212</p>
+                <span>$232</span>
+                <div>-20%</div>
+              </div>
             </div>
             <div class="item-shop__container--card">
               <img src="./assets/images/shop-item-6.png" alt="shop-item" />
-              <h3>T-shirt With Tape Details</h3>
-              <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-2-icon.svg"
-                alt="star"
-              /><span>4.5/5</span>
-              <p>$120</p>
+              <h3>Couradge Graphic T-shirt</h3>
+              <div class="shop-card-reviews">
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><span>4.0/5</span>
+              </div>
+              <p>$145</p>
             </div>
             <div class="item-shop__container--card">
               <img src="./assets/images/shop-item-7.png" alt="shop-item" />
-              <h3>T-shirt With Tape Details</h3>
-              <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-2-icon.svg"
-                alt="star"
-              /><span>4.5/5</span>
-              <p>$120</p>
+              <h3>Loose Fit Bermuda Shorts</h3>
+              <div class="shop-card-reviews">
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" />
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" />
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" />
+                <span>3.0/5</span>
+              </div>
+              <p>$80</p>
             </div>
             <div class="item-shop__container--card">
               <img src="./assets/images/shop-item-8.png" alt="shop-item" />
-              <h3>T-shirt With Tape Details</h3>
-              <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-1-icon.svg"
-                alt="star"
-              /><img
-                src="./assets/images/icons/star-2-icon.svg"
-                alt="star"
-              /><span>4.5/5</span>
-              <p>$120</p>
+              <h3>Faded Skinny Jeans</h3>
+              <div class="shop-card-reviews">
+                <img src="./assets/images/icons/star-1-icon.svg" alt="star" /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-1-icon.svg"
+                  alt="star"
+                /><img
+                  src="./assets/images/icons/star-2-icon.svg"
+                  alt="star"
+                /><span>4.5/5</span>
+              </div>
+              <p>$210</p>
             </div>
           </div>
           <button>View All</button>
@@ -257,11 +284,13 @@
               <h3>Casual</h3>
               <img src="./assets/images/dress-card-1.png" alt="casual dress" />
             </div>
-            <div class="dress-styles--card">
+            <div class="dress-styles--card dress-styles--card-long">
               <h3>Formal</h3>
               <img src="./assets/images/dress-card-2.png" alt="formal dress" />
             </div>
-            <div class="dress-styles--card">
+          </div>
+            <div class="dress-styles-container">
+            <div class="dress-styles--card dress-styles--card-long">
               <h3>Party</h3>
               <img src="./assets/images/dress-card-3.png" alt="party dress" />
             </div>
@@ -273,19 +302,23 @@
         </div>
       </section>
       <section class="feedbacks">
-        <div class="feedbacks-top">
-          <h2>OUR HAPPY CUSTOMERS</h2>
-          <div>
-            <img
-              src="./assets/images/icons/arrowside-icon.svg"
-              alt="arrow-left"
-            />
-            <img
-              src="./assets/images/icons/arrowside-icon.svg"
-              alt="arrow-right"
-            />
+        <div class="page-size-center">
+          <div class="feedbacks-top">
+            <h2>OUR HAPPY CUSTOMERS</h2>
+            <div>
+              <img
+                src="./assets/images/icons/arrowside-icon.svg"
+                alt="arrow-left"
+                class="btn"
+              />
+              <img
+                src="./assets/images/icons/arrowside-icon.svg"
+                alt="arrow-right"
+                class="btn"
+              />
+            </div>
           </div>
-        </div>
+        
         <div class="feedbacks-bottom">
           <div class="feedback-card">
             <div>
@@ -357,7 +390,7 @@
               /><img src="./assets/images/icons/star-1-icon.svg" alt="star" />
             </div>
             <div>
-              <h3>Sarah M.</h3>
+              <h3>Alex K.</h3>
               <img
                 src="./assets/images/icons/verified-icon.svg"
                 alt="verified-icon"
@@ -365,9 +398,7 @@
             </div>
             <div>
               <p>
-                "I'm blown away by the quality and style of the clothes I
-                received from Shop.co. From casual wear to elegant dresses,
-                every piece I've bought has exceeded my expectations.”
+                "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”
               </p>
             </div>
           </div>
@@ -385,7 +416,7 @@
               /><img src="./assets/images/icons/star-1-icon.svg" alt="star" />
             </div>
             <div>
-              <h3>Sarah M.</h3>
+              <h3>James L.</h3>
               <img
                 src="./assets/images/icons/verified-icon.svg"
                 alt="verified-icon"
@@ -393,9 +424,7 @@
             </div>
             <div>
               <p>
-                "I'm blown away by the quality and style of the clothes I
-                received from Shop.co. From casual wear to elegant dresses,
-                every piece I've bought has exceeded my expectations.”
+                "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”
               </p>
             </div>
           </div>
@@ -428,6 +457,7 @@
             </div>
           </div>
         </div>
+      </div>
       </section>
     </main>
 
