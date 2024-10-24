@@ -369,6 +369,7 @@ main .feedbacks .page-size-center .feedbacks-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 70px 0px 30px 0px;
 }
 main .feedbacks .page-size-center .feedbacks-top h2 {
   font-size: 50px;
@@ -391,6 +392,7 @@ main .feedbacks .page-size-center .feedbacks-bottom {
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 180px;
 }
 
 main .feedbacks .page-size-center .feedbacks-bottom .feedback-card {
@@ -440,4 +442,96 @@ main
 main .feedbacks .page-size-center .feedbacks-bottom .feedback-card:first-child,
 main .feedbacks .page-size-center .feedbacks-bottom .feedback-card:last-child {
   filter: blur(1px);
+}
+
+footer {
+  background-color: #f0f0f0;
+}
+footer .page-size-center {
+  position: relative;
+}
+
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  padding: 40px 100px;
+  border-radius: 25px;
+  position: absolute;
+  top: -100px;
+}
+footer .footer-top h2 {
+  width: 33%;
+  font-size: 45px;
+}
+footer .footer-top > div {
+  width: 30%;
+}
+footer .footer-top > div > form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 10px;
+}
+footer .footer-top > div > form > input,
+footer .footer-top > div > form > button {
+  width: 100%;
+  padding: 12px 20px 12px 54px;
+  border-radius: 25px;
+  font-size: 20px;
+  border: none;
+}
+footer .footer-top > div > form > input {
+  font-weight: 300;
+  font-size: 18px;
+}
+footer .footer-top > div > form > label {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+footer .footer-middle {
+  display: flex;
+  justify-content: space-between;
+  padding: 150px 0px 50px 0px;
+  border-bottom: 1px solid var(--border-cl);
+}
+
+footer .footer-middle .footer-middle--item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+footer .footer-middle .footer-middle--item ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .footer-middle .footer-middle-first h2 {
+  font-size: 46px;
+}
+
+footer .footer-middle .footer-middle-second h3 {
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+footer .footer-middle .footer-middle--item li a {
+  font-size: 18px;
+}
+footer .footer-middle .footer-middle--item li a,
+footer .footer-middle .footer-middle--item p,
+footer .footer-bottom p {
+  color: var(--primary-text);
+  font-weight: 300;
+}
+
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
 }
