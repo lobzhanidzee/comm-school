@@ -61,6 +61,11 @@ nav .page-size-center {
   justify-content: space-between;
   height: 100px;
 }
+nav .page-size-center .nav-bar-button {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
 
 nav .page-size-center > a {
   font-size: 45px;
@@ -75,6 +80,11 @@ nav .page-size-center ul {
 nav .page-size-center ul li {
   font-size: large;
   font-weight: 300;
+}
+nav .page-size-center ul li:first-child > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 nav .page-size-center form {
   display: flex;
@@ -102,14 +112,19 @@ nav .page-size-center .header-cart-profile {
   display: flex;
   gap: 20px;
 }
+nav .page-size-center .header-cart-profile > button {
+  background-color: transparent;
+  border: none;
+  display: none;
+}
 
 /* MAIN - WELCOME SECTION */
 main .welcome-section {
-  height: 663px;
+  height: fit-content;
   background-image: url("../images/first-section-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 80px;
+  padding: 80px 0px;
 }
 main .welcome-section {
   position: relative;
@@ -448,6 +463,7 @@ main .feedbacks .page-size-center .feedbacks-bottom .feedback-card:last-child {
   filter: blur(1px);
 }
 
+/* FOOTER */
 footer {
   background-color: #f0f0f0;
   margin-top: 180px;
@@ -463,14 +479,15 @@ footer .footer-top {
   background-color: #000000;
   color: #ffffff;
   width: 100%;
-  padding: 40px 100px;
+  padding: 40px 5%;
   border-radius: 25px;
   position: absolute;
   top: -100px;
 }
 footer .footer-top h2 {
-  width: 33%;
+  width: 50%;
   font-size: 45px;
+  max-height: 134px;
 }
 footer .footer-top > div {
   width: 30%;
@@ -510,14 +527,18 @@ footer .footer-middle {
   padding: 150px 0px 50px 0px;
   border-bottom: 1px solid var(--border-cl);
 }
-
-footer .footer-middle .footer-middle--item {
+footer .footer-middle > div {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+footer .footer-middle > div .footer-middle--item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
 }
-footer .footer-middle .footer-middle-first {
+footer .footer-middle > div:first-child {
   width: 25%;
 }
 footer .footer-middle .footer-middle-first .social-media {
@@ -783,4 +804,342 @@ main .shopping-cart .shopping-cart__prices > button {
   font-size: 14px;
   border-radius: 25px;
   border: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1366px) {
+  /* MAIN - WELCOME SECTION */
+  main
+    .dress-styles
+    .page-size-center
+    .dress-styles-container
+    .dress-styles--card
+    > img {
+    width: 357px;
+  }
+  main
+    .dress-styles
+    .page-size-center
+    .dress-styles-container
+    .dress-styles--card-long
+    > img {
+    width: 604px;
+  }
+}
+@media screen and (max-width: 1185px) {
+  /* MAIN - WELCOME SECTION */
+}
+@media screen and (max-width: 1225px) {
+  .page-size-center {
+    max-width: 95%;
+  }
+
+  /* HEADER - NAV BAR*/
+  nav .page-size-center {
+    justify-content: unset;
+    gap: 20px;
+  }
+  nav .page-size-center .nav-bar-button {
+    display: block;
+  }
+  nav .page-size-center .header-cart-profile {
+    margin-left: auto;
+    gap: 10px;
+  }
+  nav .page-size-center .header-cart-profile > button {
+    display: block;
+  }
+  nav .page-size-center form {
+    display: none;
+  }
+  nav .page-size-center ul {
+    display: none;
+  }
+
+  nav .page-size-center > a {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  /* MAIN - WELCOME SECTION */
+  main .welcome-section {
+    background-size: cover;
+    background-position: top;
+  }
+  main .welcome-section .page-size-center {
+    display: flex;
+    flex-direction: column;
+  }
+  main .welcome-section .page-size-center .welcome-section--text {
+    width: unset;
+  }
+  main .welcome-section .page-size-center .welcome-section--text > p {
+    width: 50%;
+  }
+  main .welcome-section .page-size-center .welcome-section--stats {
+    justify-content: left;
+    width: unset;
+  }
+  main .brands {
+    height: fit-content;
+  }
+  main
+    .welcome-section
+    .page-size-center
+    .welcome-section--stats
+    > div:nth-child(2),
+  main .welcome-section .page-size-center .welcome-section--stats > div {
+    padding: 0px 5%;
+  }
+
+  /* MAIN - BRANDS SECTION */
+  main .brands .page-size-center {
+    padding: 20px 0px;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .dress-styles .page-size-center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  main .dress-styles .page-size-center .dress-styles-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main
+    .dress-styles
+    .page-size-center
+    .dress-styles-container
+    .dress-styles--card
+    > img {
+    width: 507px;
+  }
+
+  /* FOOTER */
+  footer .footer-top h2 {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* MAIN - WELCOME SECTION */
+  main .welcome-section {
+    background-size: auto;
+    background-position: 90% 600px;
+    background-color: #f0f0f0;
+  }
+  main .welcome-section .page-size-center {
+    padding-bottom: 80%;
+  }
+  main .welcome-section > img:first-child {
+    top: 600px;
+    right: 2%;
+  }
+  main .welcome-section > img:nth-child(2) {
+    right: 80%;
+    top: 60%;
+  }
+
+  main .welcome-section .page-size-center .welcome-section--text > button {
+    width: 100%;
+  }
+  main .welcome-section .page-size-center .welcome-section--text > p {
+    width: 100%;
+  }
+  main .welcome-section .page-size-center .welcome-section--stats {
+    justify-content: space-between;
+  }
+  /* MAIN - ITEM SHOP SECTION */
+  main .item-shop {
+    overflow: hidden;
+  }
+  main .item-shop .page-size-center .item-shop__container {
+    gap: 25px;
+  }
+  main
+    .item-shop
+    .page-size-center
+    .item-shop__container
+    .item-shop__container--card {
+    min-width: 60%;
+    overflow: hidden;
+  }
+
+  /* MAIN - DRESS STYLES SECTION */
+  main
+    .dress-styles
+    .page-size-center
+    .dress-styles-container
+    .dress-styles--card
+    > img {
+    width: 407px;
+  }
+  /* MAIN - FEEDBACKS SECTION */
+
+  main .feedbacks .page-size-center .feedbacks-bottom .feedback-card {
+    min-width: 100%;
+  }
+
+  /* MAIN - FOOTER */
+  footer .footer-top {
+    flex-direction: column;
+    gap: 15px;
+  }
+  footer .footer-top h2 {
+    width: 100%;
+  }
+  footer .footer-top > div {
+    width: 100%;
+  }
+  footer .footer-middle {
+    flex-direction: column;
+    padding: 280px 0px 50px 0px;
+  }
+  footer .footer-middle > div:first-child {
+    width: 100%;
+  }
+  footer .footer-middle > div:last-child {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  footer .footer-middle > div:last-child .footer-middle-second {
+    width: 50%;
+  }
+  footer .footer-middle .footer-middle-second h3 {
+    margin-top: 25px;
+  }
+
+  footer .footer-bottom {
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+  }
+  /* CART PAGE */
+
+  main .shopping-cart .page-size-center > div {
+    flex-direction: column;
+  }
+  main .shopping-cart .page-size-center .shopping-cart__container,
+  main .shopping-cart .page-size-center .shopping-cart__prices {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* MAIN - WELCOME SECTION */
+  main .welcome-section {
+    background-size: 900px;
+    background-position: 90% 590px;
+    background-color: #f0f0f0;
+    padding: 50px 0px 200px 0px;
+  }
+  main .welcome-section .page-size-center .welcome-section--text > h1 {
+    font-size: 50px;
+    justify-content: space-around;
+    line-height: 50px;
+  }
+  main .welcome-section .page-size-center {
+    padding-bottom: 50%;
+  }
+  main .welcome-section > img:first-child {
+    transform: scale(0.7);
+    top: 600px;
+    right: 2%;
+  }
+  main .welcome-section > img:nth-child(2) {
+    transform: scale(0.4);
+    left: 2%;
+    top: 70%;
+  }
+
+  main .welcome-section .page-size-center .welcome-section--stats {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  main
+    .welcome-section
+    .page-size-center
+    .welcome-section--stats
+    > div:nth-child(2) {
+    border-right: none;
+  }
+
+  /* MAIN - DRESS STYLES SECTION */
+  main
+    .dress-styles
+    .page-size-center
+    .dress-styles-container
+    .dress-styles--card
+    > img {
+    width: 307px;
+    height: 220px;
+  }
+
+  /* CART PAGE */
+  main
+    .shopping-cart
+    .page-size-center
+    .shopping-cart__container
+    > .shopping-cart__container-card
+    > div:first-child
+    > img {
+    width: 100%;
+    height: 100%;
+  }
+  main
+    .shopping-cart
+    .page-size-center
+    .shopping-cart__container
+    > .shopping-cart__container-card
+    > div:first-child
+    > div
+    > h2 {
+    font-size: 16px;
+    text-wrap: nowrap;
+    max-width: 70px;
+  }
+  main
+    .shopping-cart
+    .page-size-center
+    .shopping-cart__container
+    > .shopping-cart__container-card
+    > div:last-child
+    > div {
+    width: 106px;
+    height: 35px;
+  }
+  main
+    .shopping-cart
+    .page-size-center
+    .shopping-cart__container
+    > .shopping-cart__container-card
+    > div:first-child
+    > div
+    > p:last-child {
+    font-size: 19px;
+    margin-top: 25px;
+  }
+  main .shopping-cart .page-size-center > div > div {
+    padding: 12px;
+  }
+  /* FOOTER */
+  footer {
+    margin-top: 280px;
+  }
+
+  footer .footer-top {
+    top: -200px;
+  }
+  footer .footer-top h2 {
+    max-height: none;
+  }
+
+  footer .footer-middle {
+    padding: 260px 0px 50px 0px;
+  }
 }
