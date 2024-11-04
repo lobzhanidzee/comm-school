@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 5</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn open-modal">Sign Up</button>
+      <div class="modal-window hidden">
+        <button class="close-modal">X</button>
+        <form action="?">
+          <label for="firstname">Firstname</label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="John"
+            class="not-valid"
+          />
+          <label for="lastname">Lastname</label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Smith"
+          />
+          <label for="user-email">E-Mail</label>
+          <input
+            type="email"
+            name="user-email"
+            id="user-email"
+            placeholder="email@email.com"
+          />
+          <label for="user-password">Password</label>
+          <input
+            type="password"
+            name="user-password"
+            id="user-password"
+            placeholder="********"
+          />
+          <label for="repeat-password">Repeat Password</label>
+          <input
+            type="password"
+            name="repeat-password"
+            id="repeat-password"
+            placeholder="********"
+          />
+          <button class="btn signup-btn">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

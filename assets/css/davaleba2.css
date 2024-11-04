@@ -1,0 +1,25 @@
+ul {
+  list-style-type: none;
+}
+
+button {
+  border-radius: 15px;
+  background-color: beige;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.shop {
+  display: flex;
+  justify-content: space-evenly;
+}
+.shop-item {
+  background-color: whitesmoke;
+  border: 2px solid lightblue;
+  width: 370px;
+}
