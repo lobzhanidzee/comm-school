@@ -1,93 +1,59 @@
+@font-face {
+  font-family: "Quicksand";
+  src: url(../fonts/Quicksand-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url(../fonts/Quicksand-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url(../fonts/Quicksand-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url(../fonts/Quicksand-SemiBold.ttf) format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url(../fonts/Quicksand-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Quicksand";
 }
-
 ul {
   list-style-type: none;
 }
-
 a {
   text-decoration: none;
 }
-
 .hidden {
   display: none;
 }
 
-.btn {
+header > .page-size-center > img {
+  width: 250px;
+}
+.page-size-center {
+  max-width: 85%;
+  margin: auto;
+}
+.banner .page-size-center > div {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #2293e9;
-  color: #ffffff;
-  border-radius: 15px;
-  border: 3px solid black;
-  font-weight: bold;
-  cursor: pointer;
+  gap: 20px;
 }
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: aliceblue;
-}
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.open-modal {
-  width: 150px;
-  height: 50px;
-  font-size: 24px;
-}
-
-.modal-window {
-  width: 350px;
-  box-shadow: 1px 1px 6px 1px #00000036;
-  background-color: #ffffff;
-
-  position: absolute;
-}
-.modal-window > .close-modal {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  font-size: 25px;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
-}
-.modal-window > form {
-  display: flex;
-  flex-direction: column;
-  padding: 70px 50px;
-  font-size: 18px;
-}
-
-.modal-window > form > input {
-  border: none;
-  border-bottom: 1px solid #2293e9;
-  padding: 5px;
-  margin-bottom: 15px;
-}
-
-.modal-window > form > input:focus {
-  outline: none;
-}
-
-.modal-window > form .signup-btn {
-  width: 100%;
-  height: 40px;
-  margin-top: 20px;
-  font-size: 18px;
-  border: none;
-}
-
-.not-valid {
-  border-bottom: 1px solid red;
+.banner .page-size-center > div > div > div > img {
+  width: 60vh;
+  height: 40vh;
+  border-radius: 25px;
 }
