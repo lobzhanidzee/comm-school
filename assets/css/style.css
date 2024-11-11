@@ -517,3 +517,49 @@ main .about-us .page-size-center h1,
 main .about-us .page-size-center h2 {
   text-align: center;
 }
+
+/* MAIN - CONTACT US PAGE */
+main .contact-us .page-size-center {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+main .contact-us .page-size-center h1 {
+  text-align: center;
+}
+main .contact-us .page-size-center > form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
+  min-height: 450px;
+}
+main .contact-us .page-size-center > form > input {
+  height: 40px;
+  padding: 6px;
+  border-radius: 15px;
+  border: 1px solid var(--primary-text);
+}
+main .contact-us .page-size-center > form > textarea {
+  padding: 6px;
+  resize: none;
+  border-radius: 15px;
+
+  border: 1px solid var(--primary-text);
+}
+
+main .contact-us .page-size-center > form > button {
+  height: 50px;
+  background-color: var(--btn-cl);
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  transition: background-color 300ms;
+}
+main .contact-us .page-size-center > form > button:hover {
+  background-color: var(--btn-hover-cl);
+}
