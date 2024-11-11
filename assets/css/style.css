@@ -35,25 +35,233 @@ ul {
 }
 a {
   text-decoration: none;
+  color: #363636;
 }
-.hidden {
-  display: none;
-}
-
-header > .page-size-center > img {
-  width: 250px;
+button {
+  cursor: pointer;
 }
 .page-size-center {
   max-width: 85%;
   margin: auto;
 }
-.banner .page-size-center > div {
+.hidden {
+  display: none;
+}
+img[alt="Logo"] {
+  width: 250px;
+}
+
+/* HEADER */
+header > .page-size-center {
+  padding: 20px 0px;
+}
+header > .page-size-center,
+header > .page-size-center > nav,
+header > .page-size-center > nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > .page-size-center > nav {
+  min-width: 40%;
+}
+header > .page-size-center > nav > ul {
+  width: 100%;
+}
+header > .page-size-center > nav > ul > li > a {
+  color: #363636;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* MAIN - ANIMATED BANNER */
+.animated-banner {
+  display: flex;
+  align-items: center;
+  background-color: #3b3b3b;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+.animated-banner > div {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  overflow: hidden;
+  color: aliceblue;
+  font-size: 25px;
+}
+.animated-banner > div:first-child {
+  transform: translateX(-130vw);
+  animation-name: banner-animation;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.animated-banner > div:last-child {
+  position: absolute;
+  transform: translateX(-130vw);
+  animation-name: banner-animation;
+  animation-duration: 20s;
+  animation-delay: 7300ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  overflow: hidden;
+}
+
+.animated-banner > div > img {
+  width: 50px;
+}
+
+@keyframes banner-animation {
+  0% {
+    transform: translateX(-130vw);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+/* MAIN - BANNER */
+main .banner .page-size-center {
+  padding: 10px 0px 30px 0px;
+}
+main .banner .page-size-center > div > h1 {
+  font-size: 35px;
+  margin: 10px 0px;
+}
+main .banner .page-size-center > div {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.banner .page-size-center > div > div > div > img {
-  width: 60vh;
-  height: 40vh;
+main .banner .page-size-center > div > div > div {
+  position: relative;
+  transition: all 500ms;
+  cursor: pointer;
+  margin-top: 15px;
+}
+main .banner .page-size-center > div > div > div:hover {
+  transform: scale(1.01);
+}
+main .banner .page-size-center > div > div > div > span {
+  font-size: 25px;
+  font-weight: 700;
+  color: #363636;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+main .banner .page-size-center > div > div > div > img {
+  width: 30vw;
+  height: 20vw;
   border-radius: 25px;
+}
+
+/* MAIN - TOP SELLING */
+main .top-selling .top-selling__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+main .top-selling .top-selling__header > h2 {
+  font-size: 30px;
+}
+main .top-selling .top-selling__header > div {
+  display: flex;
+  gap: 20px;
+}
+main .top-selling .top-selling__header > div > button {
+  background-color: transparent;
+  border: none;
+  width: 25px;
+  height: 25px;
+}
+main .top-selling .top-selling__header > div > button > img {
+  width: 100%;
+  height: 100%;
+}
+main .top-selling .top-selling__header > div > button > img[alt="arrow-right"] {
+  transform: rotateZ(180deg);
+}
+
+main .top-selling .top-selling__container {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  gap: 43px;
+}
+main .top-selling .top-selling__container .top-selling--card {
+  width: 23%;
+  min-width: 23%;
+}
+main .top-selling .top-selling__container .top-selling--card > img {
+  width: 100%;
+}
+main .top-selling .top-selling__container .top-selling--card > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+main .top-selling .top-selling__container .top-selling--card > div > h3 {
+  font-size: 20px;
+}
+main .top-selling .top-selling__container .top-selling--card > div > strong {
+  font-size: 18px;
+}
+
+main .top-selling .top-selling__container .top-selling--card > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(101, 195, 242);
+  margin-top: 15px;
+  gap: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* FOOTER - TOP */
+footer {
+  /* border-top: 1px solid #68676789; */
+  margin-top: 50px;
+  background-color: #ededed75;
+  padding-top: 30px;
+}
+footer .footer-top {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #68676789;
+}
+footer .footer-top,
+footer .footer-top > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-top > div:nth-child(2) {
+  width: 45%;
+}
+footer .footer-top > div:nth-child(2) > div:first-child,
+footer .footer-top > div:nth-child(2) > div:first-child > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .footer-top > div:nth-child(2) > div:last-child > ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px 10px 0px;
 }
