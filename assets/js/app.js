@@ -2,12 +2,13 @@ import { products } from "./helper.js";
 
 let html = "";
 
+// TOP SELLING CARDS
 const shopContainer = document.querySelector(".top-selling__container");
 const topSelling = async () => {
   try {
-    const fetchedData = await products;
+    const [...fetchedData] = await products;
 
-    for (let i = 0; i < 42; i++) {
+    for (let i = 0; i < fetchedData.length; i++) {
       fetchedData.sort((a, b) => b.rating - a.rating);
       const element = fetchedData[i];
       if (element.rating > 4) {
@@ -37,7 +38,43 @@ const topSelling = async () => {
   }
 };
 
-topSelling();
+// CATEGORIES
+const categoriesShop = document.querySelector(".all-categories-items");
+
+const categories = async () => {
+  try {
+    const [...fetchedData] = await products;
+
+    for (let i = 0; i < 42; i++) {
+      const element = fetchedData[i];
+      if (element.rating > 4) {
+        html += `
+         <div class="top-selling--card">
+                <a href="#">
+                <img src="${element.thumbnail}" alt="shop-item" />
+                </a>
+                  <div>
+                    <h3>${element.title}</h3>
+                    <p>Rating: ${element.rating}</p>
+                    <strong>Price: ${element.price}$</strong>
+                  </div>
+                  <button class="add-cart-btn">
+                    <img
+                      src="./assets/images/icons/add-to-cart.png"
+                      alt="add-to-card-icon"
+                    />Add to cart
+                  </button>
+                </div>
+        `;
+      }
+      categoriesShop.innerHTML = html;
+    }
+  } catch {
+    console.log("Error while fetching");
+  }
+};
+
+categories();
 
 // TOP SELLING SLIDER
 const slider = function () {
@@ -64,4 +101,5 @@ const slider = function () {
 
 if (window.location.pathname.endsWith("index.html")) {
   slider();
+  topSelling();
 }

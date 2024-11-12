@@ -202,36 +202,36 @@ main .top-selling .top-selling__container {
   overflow: hidden;
   gap: 43px;
 }
-main .top-selling .top-selling__container .top-selling--card {
+main .top-selling--card {
   width: 23%;
   min-width: 23%;
   transition: all 300ms;
 }
-main .top-selling .top-selling__container .top-selling--card > a > img {
+main .top-selling--card > a > img {
   width: 100%;
   transition: transform 300ms;
   cursor: pointer;
 }
-main .top-selling .top-selling__container .top-selling--card > a > img:hover {
+main .top-selling--card > a > img:hover {
   transform: scale(1.05);
 }
-main .top-selling .top-selling__container .top-selling--card > div {
+main .top-selling--card > div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
   padding: 0px 10px 0px 10px;
 }
-main .top-selling .top-selling__container .top-selling--card > div > h3 {
+main .top-selling--card > div > h3 {
   font-size: 20px;
   margin-bottom: 30px;
   height: 1vw;
 }
-main .top-selling .top-selling__container .top-selling--card > div > strong {
+main .top-selling--card > div > strong {
   font-size: 18px;
 }
 
-main .top-selling .top-selling__container .top-selling--card > button {
+main .top-selling--card > button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,20 +247,19 @@ main .top-selling .top-selling__container .top-selling--card > button {
   font-weight: 500;
   transition: background-color 300ms;
 }
-main .top-selling .top-selling__container .top-selling--card > button:hover {
+main .top-selling--card > button:hover {
   background-color: var(--btn-hover-cl);
 }
 
 /* FOOTER - TOP */
 footer {
-  /* border-top: 1px solid #68676789; */
   margin-top: 50px;
   background-color: #ededed75;
   padding-top: 30px;
 }
 footer .footer-top {
   padding-bottom: 30px;
-  border-bottom: 1px solid #68676789;
+  border-bottom: 1px solid var(--border-cl);
 }
 footer .footer-top,
 footer .footer-top > div:nth-child(2) {
@@ -561,4 +560,48 @@ main .contact-us .page-size-center > form > button {
 }
 main .contact-us .page-size-center > form > button:hover {
   background-color: var(--btn-hover-cl);
+}
+
+/* MAIN - ALL CATEGORIES */
+main .categories-filter .page-size-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+main .categories-filter .page-size-center > h1 {
+  font-size: 35px;
+}
+main .categories-filter .page-size-center .filter-btn {
+  border-bottom: 1px solid var(--border-cl);
+  padding-bottom: 30px;
+}
+main .categories-filter .page-size-center .filter-btn > button {
+  background-color: transparent;
+  padding: 10px 40px;
+  border: 1px solid var(--border-cl);
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 300ms;
+}
+main .categories-filter .page-size-center .filter-btn > button:hover,
+main .categories-filter .page-size-center .filter-btn > button:focus {
+  background-color: var(--btn-hover-cl);
+  color: #ffffff;
+}
+
+main .categories-filter .page-size-center .all-categories-items {
+  display: flex;
+  justify-content: center;
+  gap: 2.6%;
+  flex-wrap: wrap;
+}
+
+main
+  .categories-filter
+  .page-size-center
+  .all-categories-items
+  > .top-selling--card {
+  margin-bottom: 30px;
 }
