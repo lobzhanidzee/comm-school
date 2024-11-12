@@ -173,7 +173,6 @@ main .top-selling .top-selling__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
   margin-bottom: 25px;
 }
 main .top-selling .top-selling__header > h2 {
