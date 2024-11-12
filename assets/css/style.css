@@ -64,6 +64,23 @@ header > .page-size-center {
   padding: 20px 0px;
   border-bottom: 1px solid #68676789;
 }
+header > .page-size-center > a > img[alt="cart-icon"] {
+  width: 40px;
+}
+header > .page-size-center > .cart-btn {
+  position: relative;
+}
+header > .page-size-center > a > .cart-items-num {
+  bottom: 1px;
+  left: -19px;
+  padding: 4px 8px;
+  border: 1px solid var(--border-cl);
+  border-radius: 50%;
+  position: absolute;
+  font-weight: 700;
+  color: var(--btn-cl);
+}
+
 header > .page-size-center,
 header > .page-size-center > nav,
 header > .page-size-center > nav > ul {

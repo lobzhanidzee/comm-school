@@ -6,5 +6,4 @@ export const products = fetch("https://dummyjson.com/products?limit=42")
   })
   .catch((err) => {
     console.log(err);
-    throw err;
   });
