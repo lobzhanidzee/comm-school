@@ -1,4 +1,5 @@
 import { products } from "./helper.js";
+import getSingleProduct from "./helper.js";
 
 let html = "";
 
@@ -8,15 +9,15 @@ const makeHtml = function (arr, container) {
 
     html += `
     <div class="top-selling--card">
-    <a href="#">
-    <img src="${element.thumbnail}" alt="shop-item" />
+    <a href="./product.html?id=#${element.id}">
+    <img src="${element.thumbnail}" alt="shop-item" data-id="${element.id}"/>
     </a>
     <div>
     <h3>${element.title}</h3>
     <p>Rating: ${element.rating}</p>
     <strong>Price: ${element.price}$</strong>
     </div>
-    <button class="add-cart-btn">
+    <button class="add-cart-btn" data-id="${element.id}" >
     <img
     src="./assets/images/icons/add-to-cart.png"
     alt="add-to-card-icon"
@@ -30,6 +31,7 @@ const makeHtml = function (arr, container) {
 
 // TOP SELLING CARDS
 const shopContainer = document.querySelector(".top-selling__container");
+
 const topSelling = async () => {
   try {
     const [...fetchedData] = await products;
@@ -98,6 +100,82 @@ const slider = function () {
   });
 };
 
+// PRODUCT DETAILS
+
+const getProductDescription = function () {
+  let productDetailsHtml = "";
+  const id = window.location.hash.slice(1);
+
+  getSingleProduct(id).then((product) => {
+    const productContainer = document.querySelector(
+      ".product-description--card"
+    );
+
+    productDetailsHtml = `
+              <div class="product-description__img">
+                <div>
+                  <img
+                    src="${
+                      product.images.length > 1
+                        ? product.images[0]
+                        : product.images
+                    }"
+                    alt="shop-item"
+                  />
+                </div>
+                <div>
+                  ${
+                    product.images.length > 2
+                      ? `<img
+                    src="${product.images[1]}"
+                    alt="shop-item"
+                  /> <img
+                    src="${product.images[2]}"
+                    alt="shop-item"
+                  />`
+                      : ""
+                  }
+                </div>
+              </div>
+              <div class="product-description__info">
+                <div>
+                  <h2>${product.title}</h2>
+                  <p>Rating: ${product.rating}</p>
+                  <p>Price: <strong>${product.price}$</strong></p>
+                  <p>Description: ${product.description}</p>
+                  <p>In stock: ${product.stock}</p>
+                  <p>Tags: ${product.tags
+                    .map((element) => element)
+                    .join(", ")}</p>
+                </div>
+                <div class="product-description__btns">
+                  <div>
+                    <button>
+                      <img
+                        src="./assets/images/icons/icon-minus.png"
+                        alt="minus-icon"
+                      />
+                    </button>
+                    <p class="quantity">1</p>
+                    <button>
+                      <img
+                        src="./assets/images/icons/icon-plus.svg"
+                        alt="plus-icon"
+                      />
+                    </button>
+                  </div>
+                  <button>
+                    <img src="./assets/images/icons/add-to-cart.png" alt="" />Add
+                    to cart
+                  </button>
+                </div>
+              </div>
+    `;
+
+    productContainer.innerHTML = productDetailsHtml;
+  });
+};
+
 if (window.location.pathname.endsWith("index.html")) {
   slider();
   topSelling();
@@ -111,4 +189,14 @@ if (window.location.pathname.endsWith("categories.html")) {
   groceriesBtn.addEventListener("click", filterCategory);
 }
 
-// PRODUCT DETAILS
+if (window.location.pathname.endsWith("product.html")) {
+  getProductDescription();
+}
+
+// shopContainer.addEventListener("click", (event) => {
+//   if (event.target && event.target.matches("asd")) {
+//     console.log(`Item ID: ${event.target.getAttribute("data-id")}`);
+//   }
+// });
+
+// const addToCartBtn = document.querySelectorAll(".add-cart-btn");

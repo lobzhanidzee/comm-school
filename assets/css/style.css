@@ -440,7 +440,10 @@ main
   width: 126px;
   height: 40px;
   border-radius: 20px;
-  background-color: var(--input-cl);
+  background-color: var(--btn-cl);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
 }
 main
   .shopping-cart
@@ -450,18 +453,8 @@ main
   > div:last-child
   > div
   > button {
-  background-color: #ffffff00;
+  background-color: transparent;
   border: none;
-}
-main
-  .shopping-cart
-  .page-size-center
-  .shopping-cart__container
-  > .shopping-cart__container-card
-  > div:last-child
-  > div
-  > button:first-child {
-  padding: 0px 0px 11px 0px;
 }
 
 main .shopping-cart .shopping-cart__prices {
@@ -631,7 +624,6 @@ main .product-description .page-size-center {
 }
 main .product-description .page-size-center > div {
   display: flex;
-  justify-content: space-between;
   gap: 50px;
 }
 main
@@ -646,7 +638,7 @@ main
 main .product-description .page-size-center > div > .product-description__img {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 30%;
 }
 
 main
@@ -659,7 +651,25 @@ main
   justify-content: space-between;
   margin-top: 11px;
   gap: 2.5%;
-  width: 50%;
+  width: 75%;
+}
+main
+  .product-description
+  .page-size-center
+  > div
+  > .product-description__img
+  > div:first-child {
+  border: 1px solid var(--border-cl);
+  width: 100%;
+}
+main
+  .product-description
+  .page-size-center
+  > div
+  > .product-description__img
+  > div:first-child
+  > img {
+  max-height: 600px;
 }
 main
   .product-description
@@ -689,7 +699,7 @@ main
   > div {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 20px;
 }
 main
   .product-description
