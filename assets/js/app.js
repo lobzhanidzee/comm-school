@@ -3,6 +3,7 @@ import getSingleProduct from "./helper.js";
 
 let html = "";
 
+// Making html for shop cards
 const makeHtml = function (arr, container) {
   for (let i = 0; i < arr.length; i++) {
     const element = arr[i];
@@ -29,9 +30,14 @@ const makeHtml = function (arr, container) {
   container.innerHTML = html;
 };
 
+// Counter for shopping cart items
+const cartItemCount = document.querySelector(".cart-items-num");
+cartItemCount.textContent = localStorage.length;
+
 // TOP SELLING CARDS
 const shopContainer = document.querySelector(".top-selling__container");
 
+// Getting items from API, sorting highest rated, making html
 const topSelling = async () => {
   try {
     const [...fetchedData] = await products;
@@ -53,6 +59,8 @@ const fragrancesBtn = document.querySelector("#fragrances");
 const furnitureBtn = document.querySelector("#furniture");
 const groceriesBtn = document.querySelector("#groceries");
 
+// Getting items from API for all items without sorting, making html
+
 const categories = async () => {
   try {
     const [...fetchedData] = await products;
@@ -65,6 +73,7 @@ const categories = async () => {
   }
 };
 
+// filtering by categories
 const filterCategory = (btn) => {
   categories().then((res) => {
     html = "";
@@ -83,34 +92,37 @@ const slider = function () {
   const sliderPrevBtn = document.querySelector(".slider-prev");
 
   let scroll = 0;
+  const maxScroll = -5810;
+  const scrollStep = 415;
+
+  const updateSlider = () => {
+    Array.from(shopContainer.children).forEach((child) => {
+      child.style.transform = `translateX(${scroll}px)`;
+    });
+  };
 
   sliderNextBtn.addEventListener("click", () => {
-    scroll -= 415;
-    if (scroll < -5810) scroll = 0;
-    Array.from(shopContainer.children).forEach((child) => {
-      child.style.transform = `translateX(${scroll}px)`;
-    });
+    scroll -= scrollStep;
+    if (scroll < maxScroll) scroll = 0;
+    updateSlider();
   });
+
   sliderPrevBtn.addEventListener("click", () => {
-    scroll += 415;
-    if (scroll > 0) scroll = -5810;
-    Array.from(shopContainer.children).forEach((child) => {
-      child.style.transform = `translateX(${scroll}px)`;
-    });
+    scroll += scrollStep;
+    if (scroll > 0) scroll = maxScroll;
+    updateSlider();
   });
 };
 
 // PRODUCT DETAILS
+
+const productContainer = document.querySelector(".product-description--card");
 
 const getProductDescription = function () {
   let productDetailsHtml = "";
   const id = window.location.hash.slice(1);
 
   getSingleProduct(id).then((product) => {
-    const productContainer = document.querySelector(
-      ".product-description--card"
-    );
-
     productDetailsHtml = `
               <div class="product-description__img">
                 <div>
@@ -149,23 +161,8 @@ const getProductDescription = function () {
                     .join(", ")}</p>
                 </div>
                 <div class="product-description__btns">
-                  <div>
-                    <button>
-                      <img
-                        src="./assets/images/icons/icon-minus.png"
-                        alt="minus-icon"
-                      />
-                    </button>
-                    <p class="quantity">1</p>
-                    <button>
-                      <img
-                        src="./assets/images/icons/icon-plus.svg"
-                        alt="plus-icon"
-                      />
-                    </button>
-                  </div>
-                  <button>
-                    <img src="./assets/images/icons/add-to-cart.png" alt="" />Add
+                  <button class="add-cart-btn" data-id="${product.id}">
+                    <img src="./assets/images/icons/add-to-cart.png" alt="add-to-cart-btn" />Add
                     to cart
                   </button>
                 </div>
@@ -176,9 +173,99 @@ const getProductDescription = function () {
   });
 };
 
+// CART CONTAINER
+const cartContainer = document.querySelector(".shopping-cart__container");
+
+let cartHtml = "";
+let cartSum = 0;
+
+const cartSumElement = document.querySelector(".cart-sum");
+const cartSumTotalElement = document.querySelector(".cart-sum-total");
+
+const cartContent = async () => {
+  try {
+    const [...fetchedData] = await products;
+    cartHtml = ``;
+    let cartSum = 0;
+
+    if (localStorage.length === 0) {
+      cartHtml = `<h2 class="cart-empty">Cart is empty :)</h2>`;
+
+      cartSumElement.textContent = `$${cartSum.toFixed(2)}`;
+      cartSumTotalElement.textContent = `$${0}.00`;
+    }
+
+    for (const [key, value] of Object.entries(localStorage)) {
+      const product = fetchedData.find((item) => item.id === parseInt(value));
+      if (product) {
+        cartSum += product.price;
+        cartSumElement.textContent = `$${cartSum.toFixed(2)}`;
+        cartSumTotalElement.textContent = `$${(cartSum + 15).toFixed(2)}`;
+
+        cartHtml += `
+        <div class="shopping-cart__container-card">
+                    <div>
+                      <img
+                        src="${product.thumbnail}"
+                        alt="${product.title}"
+                      />
+                      <div>
+                        <h2>${product.title}</h2>
+                        <p>Description: <span>${product.description}</span></p>
+                        <p>Category: <span>${product.category}</span></p>
+                        <p>$${product.price}</p>
+                      </div>
+                    </div>
+                    <div>
+                      <button class="remove-item" data-id="${product.id}"
+                        ><img
+                          src="./assets/images/icons/trash-icon.svg"
+                          alt="Trash icon"
+                      /></button>
+                    </div>
+                  </div>
+        `;
+      }
+    }
+
+    cartContainer.innerHTML = cartHtml;
+
+    return fetchedData;
+  } catch {
+    console.log("Error while fetching");
+  }
+};
+
+const addToCart = function (container) {
+  container.addEventListener("click", (event) => {
+    if (event.target && event.target.matches(".add-cart-btn")) {
+      const id = event.target.getAttribute("data-id");
+
+      console.log(`Item ID: ${event.target.getAttribute("data-id")}`);
+
+      localStorage.setItem(`ItemID_${id}`, id);
+      console.log(localStorage.getItem(`ItemID_${id}`));
+
+      cartItemCount.textContent = localStorage.length;
+    }
+  });
+};
+
+const removeFromCart = function () {
+  cartContainer.addEventListener("click", (event) => {
+    if (event.target && event.target.closest(".remove-item")) {
+      const id = event.target.closest(".remove-item").getAttribute("data-id");
+      console.log(id);
+      localStorage.removeItem(`ItemID_${id}`);
+      cartContent();
+    }
+  });
+};
+
 if (window.location.pathname.endsWith("index.html")) {
   slider();
   topSelling();
+  addToCart(shopContainer);
 }
 
 if (window.location.pathname.endsWith("categories.html")) {
@@ -187,16 +274,15 @@ if (window.location.pathname.endsWith("categories.html")) {
   fragrancesBtn.addEventListener("click", filterCategory);
   furnitureBtn.addEventListener("click", filterCategory);
   groceriesBtn.addEventListener("click", filterCategory);
+  addToCart(categoriesShop);
 }
 
 if (window.location.pathname.endsWith("product.html")) {
   getProductDescription();
+  addToCart(productContainer);
 }
 
-// shopContainer.addEventListener("click", (event) => {
-//   if (event.target && event.target.matches("asd")) {
-//     console.log(`Item ID: ${event.target.getAttribute("data-id")}`);
-//   }
-// });
-
-// const addToCartBtn = document.querySelectorAll(".add-cart-btn");
+if (window.location.pathname.endsWith("cart.html")) {
+  cartContent();
+  removeFromCart();
+}
