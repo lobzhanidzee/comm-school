@@ -110,3 +110,5 @@ if (window.location.pathname.endsWith("categories.html")) {
   furnitureBtn.addEventListener("click", filterCategory);
   groceriesBtn.addEventListener("click", filterCategory);
 }
+
+// PRODUCT DETAILS

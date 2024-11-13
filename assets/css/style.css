@@ -622,3 +622,143 @@ main
   > .top-selling--card {
   margin-bottom: 30px;
 }
+
+/* MAIN - PRODUCT DESCRIPTIO PAGE */
+main .product-description .page-size-center {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .product-description .page-size-center > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+main
+  .product-description
+  .page-size-center
+  > div
+  > .product-description__img
+  img {
+  width: 100%;
+}
+
+main .product-description .page-size-center > div > .product-description__img {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+main
+  .product-description
+  .page-size-center
+  > div
+  > .product-description__img
+  > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 11px;
+  gap: 2.5%;
+  width: 50%;
+}
+main
+  .product-description
+  .page-size-center
+  > div
+  > .product-description__img
+  > div:last-child
+  img {
+  width: 65%;
+}
+
+main
+  .product-description
+  > .page-size-center
+  > div
+  > .product-description__info {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 20px;
+}
+main
+  .product-description
+  > .page-size-center
+  > div
+  > .product-description__info
+  > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main
+  .product-description
+  > .page-size-center
+  > div
+  > .product-description__info
+  > .product-description__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main
+  .product-description
+  > .page-size-center
+  > div
+  > .product-description__info
+  > .product-description__btns
+  > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px 20px;
+  background-color: var(--btn-cl);
+  width: 30%;
+  align-items: center;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+main
+  .product-description
+  > .page-size-center
+  > div
+  > .product-description__info
+  > .product-description__btns
+  button {
+  background-color: transparent;
+  border: none;
+}
+
+main
+  .product-description
+  > .page-size-center
+  > div
+  > .product-description__info
+  > .product-description__btns
+  > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background-color: var(--btn-cl);
+  padding: 15px 20px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  transition: background-color 300ms;
+}
+main
+  .product-description
+  > .page-size-center
+  > div
+  > .product-description__info
+  > .product-description__btns
+  > button:hover {
+  background-color: var(--btn-hover-cl);
+}
