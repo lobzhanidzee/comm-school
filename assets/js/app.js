@@ -66,8 +66,6 @@ const categories = async () => {
     const [...fetchedData] = await products;
 
     makeHtml(fetchedData, categoriesShop);
-
-    return fetchedData;
   } catch {
     console.log("Error while fetching");
   }
@@ -188,6 +186,7 @@ const cartContent = async () => {
     cartHtml = ``;
     let cartSum = 0;
 
+    // checking if local storage is empty
     if (localStorage.length === 0) {
       cartHtml = `<h2 class="cart-empty">Cart is empty :)</h2>`;
 
@@ -195,9 +194,11 @@ const cartContent = async () => {
       cartSumTotalElement.textContent = `$${0}.00`;
     }
 
+    // local storage is not empty looping it and making html structur from it
     for (const [key, value] of Object.entries(localStorage)) {
       const product = fetchedData.find((item) => item.id === parseInt(value));
       if (product) {
+        // counting total sum of items
         cartSum += product.price;
         cartSumElement.textContent = `$${cartSum.toFixed(2)}`;
         cartSumTotalElement.textContent = `$${(cartSum + 15).toFixed(2)}`;
@@ -229,33 +230,32 @@ const cartContent = async () => {
     }
 
     cartContainer.innerHTML = cartHtml;
-
-    return fetchedData;
   } catch {
     console.log("Error while fetching");
   }
 };
 
+// function for adding to cart. function checking if event target have class ".add-cart-btn",
+// also all ".add-cart-btn" buttons have data attribute of item id so it will add the id item in cart(localStorage)
 const addToCart = function (container) {
   container.addEventListener("click", (event) => {
     if (event.target && event.target.matches(".add-cart-btn")) {
       const id = event.target.getAttribute("data-id");
 
-      console.log(`Item ID: ${event.target.getAttribute("data-id")}`);
-
       localStorage.setItem(`ItemID_${id}`, id);
-      console.log(localStorage.getItem(`ItemID_${id}`));
 
       cartItemCount.textContent = localStorage.length;
     }
   });
 };
 
+// function for removing items from cart, it checking at clicking space closes item with class ".remove-item"
+// this btn also have data-id attribute with ID. it is removing item with that id and updateing dom
 const removeFromCart = function () {
   cartContainer.addEventListener("click", (event) => {
     if (event.target && event.target.closest(".remove-item")) {
       const id = event.target.closest(".remove-item").getAttribute("data-id");
-      console.log(id);
+
       localStorage.removeItem(`ItemID_${id}`);
       cartContent();
     }
