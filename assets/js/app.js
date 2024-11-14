@@ -47,6 +47,7 @@ const topSelling = async () => {
       .filter((product) => product.rating > 4);
 
     makeHtml(filteredArr, shopContainer);
+    return filteredArr;
   } catch {
     console.log("Error while fetching");
   }
@@ -66,9 +67,11 @@ const categories = async () => {
     const [...fetchedData] = await products;
 
     makeHtml(fetchedData, categoriesShop);
+    return fetchedData;
   } catch {
     console.log("Error while fetching");
   }
+  return fetchedData;
 };
 
 // filtering by categories
@@ -77,9 +80,9 @@ const filterCategory = (btn) => {
     html = "";
     categoriesShop.innerHTML = html;
 
-    const categoryItems = res.filter((el) => {
-      return el.category === btn.target.dataset.category;
-    });
+    const categoryItems = res.filter(
+      (el) => el.category === btn.target.dataset.category
+    );
     makeHtml(categoryItems, categoriesShop);
   });
 };
@@ -262,7 +265,10 @@ const removeFromCart = function () {
   });
 };
 
-if (window.location.pathname.endsWith("index.html")) {
+if (
+  window.location.pathname.endsWith("index.html") ||
+  window.location.pathname === "/"
+) {
   slider();
   topSelling();
   addToCart(shopContainer);
