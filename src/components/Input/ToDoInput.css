@@ -1,0 +1,19 @@
+.todo-container > form {
+  margin-top: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-container > form > input {
+  width: 75%;
+  padding: 10px 10px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.todo-container > form > button {
+  width: 20%;
+  padding: 10px 10px;
+  border-radius: 15px;
+  font-size: 20px;
+  background-color: rgb(141, 181, 247);
+}
