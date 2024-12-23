@@ -1,7 +1,13 @@
+:root {
+  --primaryCl: #6c63ff;
+  --lightCl: #f7f7f7;
+  --darkCl: #252525;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #root {
   display: flex;
@@ -12,6 +18,14 @@ button {
   cursor: pointer;
 }
 .todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
   width: 30%;
   font-size: 20px;
+}
+.todo-container > h1 {
+  margin-bottom: 30px;
 }

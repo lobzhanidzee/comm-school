@@ -1,5 +1,6 @@
 .list-container {
   margin-top: 30px;
+  width: 100%;
 }
 
 .list-container > ul {
@@ -10,15 +11,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .list-container > ul > li > p {
   width: 50%;
 }
-.list-container > ul > li > button {
+.list-container > ul > li .task-btns > button {
   border-radius: 10px;
   padding: 5px;
 }
-.list-container > ul > li > .remove-task-btn {
+.list-container > ul > li > .task-btns > .remove-task-btn {
   color: white;
   background-color: rgb(243, 110, 110);
 }

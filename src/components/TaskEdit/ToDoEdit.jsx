@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ToDoEdit.css";
+import editIcon from "../../assets/icons/edit-icon.svg";
 
 const EditTaskComponent = ({ taskId, editTask }) => {
   const [editInput, setEditInput] = useState("");
@@ -27,7 +28,7 @@ const EditTaskComponent = ({ taskId, editTask }) => {
     </>
   ) : (
     <button onClick={showEdit} className="edit-task-btn">
-      Edit
+      <img src={editIcon} alt="edit-icon" />
     </button>
   );
 };

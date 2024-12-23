@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import "./ToDoInput.css";
+import plusIcon from "../../assets/icons/plus-icon.svg";
 
 const ToDo = ({ submitHanlder }) => {
   const count = useRef(0);
@@ -21,9 +22,9 @@ const ToDo = ({ submitHanlder }) => {
   };
   return (
     <form action="?">
-      <input type="text" ref={inputValue} />
+      <input type="text" ref={inputValue} placeholder="Enter the task" />
       <button type="button" onClick={addToList}>
-        Add
+        <img src={plusIcon} alt="plus-icon" />
       </button>
     </form>
   );

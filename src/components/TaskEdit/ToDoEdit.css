@@ -1,3 +1,7 @@
+:root {
+  --completedCl: #252525d7;
+}
+
 .edit-task-btn,
 .confirm-task-btn {
   background-color: rgb(191, 234, 191);
