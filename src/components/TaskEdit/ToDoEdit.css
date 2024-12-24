@@ -2,7 +2,94 @@
   --completedCl: #252525d7;
 }
 
-.edit-task-btn,
-.confirm-task-btn {
-  background-color: rgb(191, 234, 191);
+.overflow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.394);
+}
+.edit-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 28%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 7px;
+  background-color: var(--lightCl);
+  padding: 20px 0px;
+  z-index: 2;
+}
+
+.edit-modal > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  margin-top: 35px;
+}
+.edit-modal > div > input {
+  width: 100%;
+  padding: 10px 15px;
+  border-color: var(--primaryCl);
+  border-radius: 7px;
+  font-size: 20px;
+  outline: none;
+}
+
+.edit-modal > div > .modal-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.edit-modal > div > .modal-btns > button {
+  border: 1px solid var(--primaryCl);
+  border-radius: 7px;
+  font-size: 20px;
+  padding: 5px 20px;
+  font-weight: 600;
+}
+
+.edit-modal > div > .modal-btns > .cancel-edit-btn {
+  background-color: var(--lightCl);
+  color: var(--primaryCl);
+}
+
+.edit-modal > div > .modal-btns > .confirm-edit-btn {
+  background-color: var(--primaryCl);
+  color: var(--lightCl);
+}
+
+.edit-icon > img,
+.edit-active-icon > img {
+  width: 20px;
+  height: 20px;
+}
+.edit-task-btn:hover .edit-icon,
+.edit-task-btn .edit-active-icon {
+  display: none;
+}
+.edit-task-btn:hover .edit-active-icon {
+  display: inline;
+}
+
+/* DARK THEME */
+.dark-theme .todo-container .edit-modal {
+  color: var(--lightCl);
+  background-color: var(--darkCl);
+}
+.dark-theme .todo-container .edit-modal > div > input {
+  border: 1px solid var(--lightCl);
+  background-color: var(--darkCl);
+  color: var(--lightCl);
+}
+.dark-theme .todo-container .edit-modal > div > .modal-btns > .cancel-edit-btn {
+  background-color: var(--darkCl);
 }

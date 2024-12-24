@@ -1,105 +1,58 @@
-.todo-container > form {
+.todo-container > .add-task-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.todo-container > .add-task-container > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primaryCl);
+  background-color: var(--primaryCl);
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+.todo-container > .add-task-container > form {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.todo-container > form > input {
-  width: 75%;
-  padding: 15px 20px;
-  border-color: var(--primaryCl);
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+.todo-container > .add-task-container > form > input {
+  width: 85%;
+  padding: 10px 15px;
+  border: 1px solid var(--primaryCl);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border-right: none;
   font-size: 20px;
   outline: none;
 }
-.todo-container > form > button {
+.todo-container > .add-task-container > form > button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-color: var(--primaryCl);
-  width: 25%;
-  padding: 15px 10px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border: 1px solid var(--primaryCl);
+  width: 15%;
+  padding: 10px 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   border-left: none;
   background-color: var(--primaryCl);
 }
 
-.checkbox-wrapper input[type="checkbox"] {
-  display: none;
-  visibility: hidden;
+/* DARK THEME */
+.dark-theme {
+  background-color: var(--darkCl);
 }
-.checkbox-wrapper .cbx {
-  margin: auto;
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: pointer;
+.dark-theme .todo-container > h1 {
+  color: var(--lightCl);
 }
-.checkbox-wrapper .cbx span {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translate3d(0, 0, 0);
+.dark-theme .todo-container > .add-task-container > form > input {
+  background-color: var(--darkCl);
+  color: var(--lightCl);
+  border-color: var(--lightCl);
 }
-.checkbox-wrapper .cbx span:first-child {
-  position: relative;
-  width: 18px;
-  height: 18px;
-  border-radius: 3px;
-  transform: scale(1);
-  vertical-align: middle;
-  border: 1px solid #9098a9;
-  transition: all 0.2s ease;
-}
-.checkbox-wrapper .cbx span:first-child svg {
-  position: absolute;
-  top: 3px;
-  left: 2px;
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 16px;
-  stroke-dashoffset: 16px;
-  transition: all 0.3s ease;
-  transition-delay: 0.1s;
-  transform: translate3d(0, 0, 0);
-}
-.checkbox-wrapper .cbx span:first-child:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: var(--primaryCl);
-  display: block;
-  transform: scale(0);
-  opacity: 1;
-  border-radius: 50%;
-}
-.checkbox-wrapper .cbx span:last-child {
-  padding-left: 8px;
-}
-.checkbox-wrapper .cbx:hover span:first-child {
-  border-color: var(--primaryCl);
-}
-
-.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child {
-  background: var(--primaryCl);
-  border-color: var(--primaryCl);
-  animation: wave-46 0.4s ease;
-}
-.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child svg {
-  stroke-dashoffset: 0;
-}
-.checkbox-wrapper .inp-cbx:checked + .cbx span:first-child:before {
-  transform: scale(3.5);
-  opacity: 0;
-  transition: all 0.6s ease;
-}
-
-@keyframes wave-46 {
-  50% {
-    transform: scale(0.9);
-  }
+.dark-theme .todo-container > .add-task-container > form > button {
+  border-color: var(--lightCl);
 }

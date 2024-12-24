@@ -9,10 +9,12 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 #root {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 button {
   cursor: pointer;
@@ -22,8 +24,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
-  width: 30%;
+  width: 55%;
   font-size: 20px;
 }
 .todo-container > h1 {
