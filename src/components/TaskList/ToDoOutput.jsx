@@ -8,7 +8,7 @@ const ToDoList = ({ toDoList, changeHandler }) => {
   const markDone = (event, id) => {
     changeHandler((prev) => {
       return prev.map((task) => {
-        if (task.id == id)
+        if (task.id === +id)
           return { ...task, isCompleted: event.target.checked };
         return task;
       });
@@ -16,13 +16,12 @@ const ToDoList = ({ toDoList, changeHandler }) => {
   };
 
   const removeFromList = (id) => {
-    changeHandler((prev) => prev.filter((task) => task.id != id));
+    changeHandler((prev) => prev.filter((task) => task.id !== +id));
   };
 
   const completedStyle = (isActive) => {
     return {
       textDecoration: isActive ? "line-through" : "none",
-      color: isActive ? "var(--completedCl)" : "black",
     };
   };
 
@@ -30,7 +29,7 @@ const ToDoList = ({ toDoList, changeHandler }) => {
     if (title.trim().length < 1) return;
 
     const newList = toDoList.map((task) => {
-      if (task.id == id) return { ...task, taskName: title };
+      if (task.id === +id) return { ...task, taskName: title };
       return task;
     });
 
