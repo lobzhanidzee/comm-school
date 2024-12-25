@@ -49,7 +49,13 @@ const ToDo = ({ submitHanlder }) => {
 
   return (
     <div className="add-task-container">
-      <form action="?">
+      <form
+        action="?"
+        onSubmit={(e) => {
+          e.preventDefault();
+          addToList();
+        }}
+      >
         <input
           type="text"
           value={inputValue}
