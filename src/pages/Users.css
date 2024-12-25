@@ -1,0 +1,25 @@
+.users-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.user-card {
+  display: flex;
+  width: 20%;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.user-card > div > img {
+  width: 150px;
+  cursor: pointer;
+}
+.user-card > div > img:hover {
+  transform: scale(1.05);
+}
+.user-card > .profile-title {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,32 +1,3 @@
-:root {
-  --primaryCl: #6c63ff;
-  --lightCl: #f7f7f7;
-  --darkCl: #252525;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-#root {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-}
 button {
   cursor: pointer;
-}
-.todo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 55%;
-  font-size: 20px;
-  margin-top: 200px;
-}
-.todo-container > h1 {
-  color: var(--primaryCl);
-  margin-bottom: 30px;
 }
