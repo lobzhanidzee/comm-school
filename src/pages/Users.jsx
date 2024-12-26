@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getUsers } from "../services/api";
-import "./Users.css";
+import UserCard from "../components/UserCard/UserCard";
 
 const Users = () => {
   const navigate = useNavigate();
@@ -40,35 +40,8 @@ const Users = () => {
         {error && <p>Error: {error}</p>}
         {!loading &&
           !error &&
-          users.map((user, i) => {
-            return (
-              <div key={i} className="user-card">
-                <div className="profile-title">
-                  <img
-                    src={user.image}
-                    alt="Profile Picture"
-                    onClick={() => {
-                      navigate(`/users/${i}`);
-                    }}
-                  />
-                </div>
-                <div className="profile-info">
-                  <span className="user-job-title">{user.company.title}</span>
-                  <p>
-                    <strong>First Name: </strong>
-                    {user.firstName}
-                  </p>
-                  <p>
-                    <strong>Last Name: </strong>
-                    {user.lastName}
-                  </p>
-                  <p>
-                    <strong>Age: </strong>
-                    {user.age}
-                  </p>
-                </div>
-              </div>
-            );
+          users.map((user) => {
+            return <UserCard user={user} navigate={navigate} key={user.id} />;
           })}
       </div>
     </>
