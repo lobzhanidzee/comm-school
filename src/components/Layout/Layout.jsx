@@ -4,15 +4,17 @@ import Footer from "../Footer/Footer";
 
 const Layout = () => {
   return (
-    <div>
+    <>
       <Header />
 
       <main>
-        <Outlet />
+        <div className="page-center-size">
+          <Outlet />
+        </div>
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,0 +1,6 @@
+header > .page-center-size > .logo {
+  width: 25%;
+}
+header > .page-center-size > .logo > img {
+  width: 100%;
+}

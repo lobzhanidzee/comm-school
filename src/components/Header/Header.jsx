@@ -1,18 +1,16 @@
-import { Link } from "react-router-dom";
+import Logo from "../Logo/Logo";
+import HeaderSearch from "../HeaderSearch/HeaderSearch";
+import HeaderUser from "../HeaderUser/HeaderUser";
+
+import "./Header.css";
 
 const Header = () => {
   return (
     <header>
-      <Link>
-        xcv
-        <img src="" alt="" srcset="" />
-      </Link>
-      <div className="search-container">
-        <form action="?">
-          <input type="text" name="search" id="search" />
-          <button>Search</button>
-        </form>
-        <Link>❤</Link>
+      <div className="page-center-size">
+        <Logo />
+        <HeaderSearch />
+        <HeaderUser />
       </div>
     </header>
   );
