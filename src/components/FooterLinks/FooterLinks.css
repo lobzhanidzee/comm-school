@@ -1,0 +1,19 @@
+.footer > div {
+  justify-content: space-between;
+}
+footer > .page-center-size {
+  justify-content: space-between;
+}
+footer > .page-center-size > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+footer .social-media--icons > ul {
+  display: flex;
+  gap: 8px;
+}
+footer .social-media--icons > ul > li > a > img {
+  width: 30px;
+}

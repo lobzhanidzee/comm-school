@@ -1,8 +1,8 @@
-const BASE_URL = "https://mocki.io/v1/35f9908c-6011-4679-bcca-30265c7f0e3e";
+const BASE_URL = "https://mocki.io/v1/a018e2f0-fd8c-41e0-bd57-1788330710a7";
 
 export const getBooks = async () => {
   try {
-    const response = fetch(BASE_URL);
+    const response = await fetch(BASE_URL);
 
     if (!response.ok) throw new Error("Network response was not ok");
     return await response.json();
@@ -13,7 +13,7 @@ export const getBooks = async () => {
 
 export const getBooksById = async (id) => {
   try {
-    const response = fetch(BASE_URL);
+    const response = await fetch(BASE_URL);
 
     if (!response.ok) throw new Error("Network response was not ok");
 

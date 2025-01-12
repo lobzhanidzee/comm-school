@@ -1,0 +1,10 @@
+footer {
+  background-color: var(--footer-bg-cl);
+  padding: 50px 0;
+}
+footer > .page-center-size > .logo {
+  width: 20%;
+}
+footer > .page-center-size > .logo > img {
+  width: 100%;
+}

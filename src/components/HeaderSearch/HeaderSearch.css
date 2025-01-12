@@ -1,0 +1,25 @@
+.search-container {
+  width: 50%;
+}
+.search-container > form {
+  position: relative;
+  width: 100%;
+}
+.search-container > form > input {
+  width: 100%;
+  padding: 15px 43px 15px 15px;
+  background-color: var(--main-bg-cl);
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.search-container > form > input:focus {
+  outline: 1px solid var(--secondary-text-cl);
+}
+.search-container > form > button {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  right: 15px;
+  top: 33%;
+}

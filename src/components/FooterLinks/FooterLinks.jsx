@@ -1,4 +1,10 @@
 import { Link } from "react-router-dom";
+import twitterIcon from "../../assets/icons/twitter-icon.svg";
+import facebookIcon from "../../assets/icons/facebook-icon.svg";
+import googleplayIcon from "../../assets/icons/googleplay-icon.svg";
+import appstoreIcon from "../../assets/icons/appstore-icon.svg";
+
+import "./FooterLinks.css";
 
 const FooterLinks = () => {
   return (
@@ -10,14 +16,18 @@ const FooterLinks = () => {
           <li>344-900-2222</li>
           <li>daviti@infobook.com</li>
         </ul>
-        <div>
+        <div className="social-media--icons">
           <h2>Follow Us</h2>
           <ul>
             <li>
-              <Link>Twitter</Link>
+              <Link>
+                <img src={twitterIcon} alt="twitter icon" />
+              </Link>
             </li>
             <li>
-              <Link>Facebook</Link>
+              <Link>
+                <img src={facebookIcon} alt="facebook icon" />
+              </Link>
             </li>
           </ul>
         </div>

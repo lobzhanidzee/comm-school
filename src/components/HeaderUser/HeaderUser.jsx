@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 import favoriteIcon from "../../assets/icons/heart.svg";
 import favoriteIconActive from "../../assets/icons/heart-active.svg";
 
+import "./HeaderUser.css";
+
 const HeaderUser = () => {
   const location = useLocation();
 

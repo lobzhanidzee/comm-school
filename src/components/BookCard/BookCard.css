@@ -1,0 +1,48 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.home-page > h1 {
+  margin-top: 15px;
+}
+.home-page > .books--container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.book--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18%;
+  padding: 10px;
+  background-color: var(--card-cl);
+  margin-bottom: 50px;
+}
+.book--card > img {
+  width: 100%;
+  height: 50vh;
+  object-fit: fill;
+}
+.book--card > p {
+  color: var(--secondary-text-cl);
+}
+.book--card > .book--card__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.book--card > .book--card__btns > span {
+  font-size: large;
+  font-weight: bold;
+}
+.book--card > .book--card__btns > button {
+  color: var(--card-cl);
+  background-color: var(--btn-cl);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
