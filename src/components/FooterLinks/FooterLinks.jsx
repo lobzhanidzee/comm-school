@@ -48,13 +48,13 @@ const FooterLinks = () => {
           <Link>App Store</Link>
         </div>
       </div>
-      <div>
+      <div className="newsletter">
         <h2>Join Our Newsletter</h2>
         <form action="/">
           <input
             type="email"
-            name="new-seller"
-            id="new-seller"
+            name="news-letter"
+            id="news-leller"
             placeholder="Email"
           />
           <button>Subscribe</button>

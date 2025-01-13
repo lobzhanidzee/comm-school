@@ -17,3 +17,26 @@ footer .social-media--icons > ul {
 footer .social-media--icons > ul > li > a > img {
   width: 30px;
 }
+footer .newsletter {
+  width: 25%;
+}
+footer .newsletter > form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+footer .newsletter > form input {
+  width: 70%;
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 3px;
+}
+footer .newsletter > form button {
+  font-size: 15px;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: var(--btn-cl);
+  color: var(--card-cl);
+  font-weight: 500;
+}
