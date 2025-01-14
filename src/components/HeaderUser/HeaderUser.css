@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 10%;
+  width: 13%;
 }
 .header--user > a {
   color: var(--primary-text-cl);

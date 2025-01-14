@@ -9,7 +9,7 @@ import "./FooterLinks.css";
 const FooterLinks = () => {
   return (
     <>
-      <div>
+      <div className="footer--contacts">
         <h2>Contact</h2>
         <ul>
           <li>4000 address</li>
@@ -32,7 +32,7 @@ const FooterLinks = () => {
           </ul>
         </div>
       </div>
-      <div>
+      <div className="footer--quick-links">
         <h2>Quick Links</h2>
         <ul>
           <li>
@@ -42,7 +42,7 @@ const FooterLinks = () => {
             <Link to="/favorites">Favorites</Link>
           </li>
         </ul>
-        <div>
+        <div className="footer--apps">
           <h2>Download Apps</h2>
           <Link>Google Play</Link>
           <Link>App Store</Link>

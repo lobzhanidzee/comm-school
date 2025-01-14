@@ -7,6 +7,7 @@ const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [booksQuantity, setBooksQuantity] = useState(20);
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -32,8 +33,26 @@ const Home = () => {
         {error && <p>Error: {error}</p>}
         {!loading &&
           !error &&
-          books.map((book) => <BookCard book={book} key={book.id} />)}
-        <button className="loadmore-btn">Load More</button>
+          books.map((book) =>
+            book.id <= booksQuantity ? (
+              <BookCard book={book} key={book.id} />
+            ) : (
+              ""
+            )
+          )}
+        <button
+          className="loadmore-btn"
+          onClick={() => {
+            setBooksQuantity((prev) => prev + 20);
+          }}
+          style={
+            booksQuantity === books.length
+              ? { display: "none" }
+              : { display: "block" }
+          }
+        >
+          Load More
+        </button>
       </div>
     </div>
   );
