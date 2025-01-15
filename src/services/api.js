@@ -10,15 +10,3 @@ export const getBooks = async () => {
     console.error("Error while fetchong books:", error);
   }
 };
-
-export const getBooksById = async (id) => {
-  try {
-    const response = await fetch(BASE_URL);
-
-    if (!response.ok) throw new Error("Network response was not ok");
-
-    return await response.json();
-  } catch (error) {
-    console.error("Error while fetchong books:", error);
-  }
-};

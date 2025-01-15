@@ -2,6 +2,9 @@
   width: 53%;
 }
 .search-container > form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   position: relative;
   width: 100%;
 }
@@ -12,14 +15,21 @@
   border: none;
   border-radius: 5px;
   font-size: 15px;
+  margin-top: 15px;
 }
 .search-container > form > input:focus {
   outline: 1px solid var(--secondary-text-cl);
 }
-.search-container > form > button {
+.search-container > form > .search-btn {
   position: absolute;
   border: none;
   background-color: transparent;
   right: 15px;
-  top: 33%;
+  top: 49%;
+}
+.search-container > .clear-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
 }

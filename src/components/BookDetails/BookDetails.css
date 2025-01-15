@@ -1,0 +1,25 @@
+.book-details {
+  display: flex;
+  gap: 20px;
+  padding-top: 50px;
+  min-height: 55vh;
+}
+.book-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.book-details > div > .book-year {
+  font-size: 20px;
+}
+.book-details > div > .book-price {
+  font-size: large;
+  font-weight: bold;
+}
+.book-details > div > .add-favorites-btn {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 20px;
+  width: 20%;
+}

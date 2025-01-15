@@ -9,7 +9,7 @@ const BookCard = ({ book }) => {
       <p>{book.year}</p>
       <div className="book--card__btns">
         <span>${book.price.toFixed(2)}</span>
-        <Link to={`book/${book.id}`}>View in detail</Link>
+        <Link to={`../book/${book.id}`}>View in detail</Link>
       </div>
     </div>
   );

@@ -1,0 +1,11 @@
+.favorite-page {
+  width: 100%;
+  padding: 20px 0;
+}
+.favorite-page > .favorite-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}

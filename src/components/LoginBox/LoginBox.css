@@ -1,0 +1,25 @@
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
+  width: 100%;
+  height: 60vh;
+}
+.login-box {
+  width: 20%;
+}
+.login-box > form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.login-box > form > input {
+  padding: 10px;
+}
+.login-box > form > button {
+  padding: 10px;
+}
