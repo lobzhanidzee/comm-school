@@ -1,5 +1,6 @@
 .favorite-page {
   width: 100%;
+  min-height: 50vh;
   padding: 20px 0;
 }
 .favorite-page > .favorite-box {

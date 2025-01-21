@@ -16,6 +16,12 @@ This project is a simple Book Store application built with React. It allows user
 - **Favorites**: Add or remove books from your favorites list.
 - **Login**: Simple login functionality to access favorite books.
 
+## 🔑 User Login Info
+
+| Email                  | Password   |
+| ---------------------- | ---------- |
+| daviti@bibliomania.com | test123456 |
+
 ## 🚀 Getting Started
 
 In the project directory, you can run:

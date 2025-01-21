@@ -27,6 +27,10 @@ const Favorite = () => {
     fetchBooks();
   }, []);
 
+  if (!favoriteList) {
+    return <p>List is empty</p>;
+  }
+
   const favoriteListBooks = books.filter((book) =>
     JSON.parse(favoriteList).includes(book.id)
   );

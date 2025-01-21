@@ -29,7 +29,7 @@ const LoginBox = () => {
         <input type="email" id="email" name="email" />
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" />
-        <button>Sign In</button>
+        <button className="login-btn">Sign In</button>
       </form>
     </div>
   );

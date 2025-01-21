@@ -39,13 +39,21 @@ const FooterLinks = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/favorites">Favorites</Link>
+            {localStorage.getItem("login") ? (
+              <Link to="/favorites">Favorites</Link>
+            ) : (
+              <p>Favorites</p>
+            )}
           </li>
         </ul>
         <div className="footer--apps">
           <h2>Download Apps</h2>
-          <Link>Google Play</Link>
-          <Link>App Store</Link>
+          <Link>
+            <img src={googleplayIcon} alt="googleplay-icon" />
+          </Link>
+          <Link>
+            <img src={appstoreIcon} alt="appstore-icon" />
+          </Link>
         </div>
       </div>
       <div className="newsletter">

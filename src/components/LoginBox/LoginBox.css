@@ -20,6 +20,9 @@
 .login-box > form > input {
   padding: 10px;
 }
-.login-box > form > button {
+.login-box > form > .login-btn {
+  background-color: var(--btn-cl);
+  font-size: 1rem;
+  color: var(--card-cl);
   padding: 10px;
 }
