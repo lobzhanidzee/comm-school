@@ -2,6 +2,28 @@
 
 This is a simple ToDo application built with React. It allows users to add, edit, and remove tasks, as well as mark them as completed. The app also supports a dark theme. 🌙
 
+## Live Demo 🌐
+
+Check out the live demo of the app [here](https://classic-todoapp.netlify.app/).
+
+## Technologies Used 🛠️
+
+- React
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Webpack
+- Babel
+- ESLint
+
+## Features ✨
+
+- ➕ Add tasks
+- ✏️ Edit tasks
+- ❌ Remove tasks
+- ✅ Mark tasks as completed
+- 🌙 Dark theme support
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -34,11 +56,3 @@ Your app is ready to be deployed!
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-## Features ✨
-
-- ➕ Add tasks
-- ✏️ Edit tasks
-- ❌ Remove tasks
-- ✅ Mark tasks as completed
-- 🌙 Dark theme support
