@@ -3,12 +3,25 @@ import favoriteIcon from "../../assets/icons/heart.svg";
 import favoriteIconActive from "../../assets/icons/heart-active.svg";
 
 import "./HeaderUser.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const HeaderUser = () => {
   const location = useLocation();
 
-  const [loggedIn, setLoggedin] = useState(false);
+  const [loggedIn, setLoggedin] = useState(localStorage.getItem("login") === "true");
+
+  useEffect(() => {
+    // Listen for changes to localStorage from other tabs/windows
+    const handleStorage = () => {
+      setLoggedin(localStorage.getItem("login") === "true");
+    };
+    window.addEventListener("storage", handleStorage);
+
+    // Also update when location changes (after login/logout navigation)
+    setLoggedin(localStorage.getItem("login") === "true");
+
+    return () => window.removeEventListener("storage", handleStorage);
+  }, [location]);
 
   const logoutHandle = (e) => {
     e.preventDefault();
@@ -18,7 +31,7 @@ const HeaderUser = () => {
 
   return (
     <div className="header--user">
-      {localStorage.getItem("login") ? (
+      {loggedIn ? (
         <Link to="/favorites">
           <img
             src={
