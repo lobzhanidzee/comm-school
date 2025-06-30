@@ -68,11 +68,11 @@ const BookDetails = () => {
             <p className="book-price">Price: {book.price}$</p>
             <p className="book-description">Description: {book.description}</p>
             {!favoriteList.includes(bookId) ? (
-              <button className="add-favorites-btn" onClick={addFavorite}>
+              <button disabled={!localStorage.getItem("login")} className="add-favorites-btn" onClick={addFavorite}>
                 Add to favorites
               </button>
             ) : (
-              <button className="add-favorites-btn" onClick={removeFavorite}>
+              <button disabled={!localStorage.getItem("login")} className="add-favorites-btn" onClick={removeFavorite}>
                 Remove from favorites
               </button>
             )}

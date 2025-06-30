@@ -7,3 +7,10 @@
 .header--user > a {
   color: var(--primary-text-cl);
 }
+.header--user > .logout-btn {
+  background: none;
+  border: none;
+  color: var(--primary-text-cl);
+  cursor: pointer;
+  font-size: 1rem;
+}
